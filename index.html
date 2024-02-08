@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./style.css">
 <!-- Links to boxicons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+<!-- Links to swiper js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -40,19 +42,19 @@
     <section class="home container" id="home">
         <div class="home-text">
             <h1>
-              Fresh Coffee & ThinCookies
+                Fresh Coffee & ThinCookies
               <!-- <h6>Study with us!</h6> -->
             </h1>
             <p>
                 A simple latte with cookies <br />Anywhere Anytime
             </p>
-            <a href="#" class="btn">
+            <a href="#flavors" class="btn">
                 <span>Shop now!</span>
                 <i class='bx bx-chevron-up'></i>
             </a>
         </div>
         <!-- home image -->
-        <img src="/images/outside_pic.jpeg" alt="" class="home-img">
+            <video controls autoplay src="/images/cookie_vid_1.mov" alt="" class="home-vid"> 
     </section>
 <!--------------------------------------------> 
     <!-- for flavors - section.flavors.container#flavors -->
@@ -66,7 +68,7 @@
             <div class="fvr-box">
                 <img src="images/cc_1tp.png" alt="" />
                 <p>Chocolate Chip</p>
-                <h2>A classic. Rich and buttery, and packed with chocolate chips.</h2>
+                <h2>A classic. Rich, soft buttery feeling, packed with chocolate chips.</h2>
                 <div class="fvr-price">
                     <span>6 cookies: $7</span>
                     <i class='bx bx-cart-add'></i>
@@ -75,7 +77,8 @@
             <div class="fvr-box">
                 <img src="images/dc_2tp.png" alt="" />
                 <p>Double Chocolate</p>
-                <h2>Rich, chocolatey, moist and tender - these cookies taste like a brownie in cookie form. </h2>
+                <h2>Rich, chocolatey, moist and tender - these cookies 
+                    taste like a brownie in cookie form. </h2>
                 <div class="fvr-price">
                     <span>12 cookies: $13</span>
                     <i class='bx bx-cart-add'></i>
@@ -84,7 +87,8 @@
             <div class="fvr-box">
                 <img src="images/sd_3tp.png" alt="" />
                 <p>Snickerdoodle</p>
-                <h2>A delicious comforting cookie with warm, buttery cinnamon goodness in every bite.</h2>
+                <h2>A delicious comforting cookie with warm, buttery cinnamon 
+                    goodness in every bite.</h2>
                 <div class="fvr-price">
                     <span>24 cookies: $25</span>
                     <i class='bx bx-cart-add'></i>
@@ -189,8 +193,99 @@
             </div>
         </div>
     </section>
+<!-------------------------------------------->
+    <!-- reviews - section.reviews.container#reviews -->
+        <section class="reviews container" id="reviews">
+            <div class="heading">
+                <h2>Customer's Reviews</h2>
+                <!-- Swiper -->
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <!-- slide 1 -->
+                <div class="swiper-slide">
+                    <div class="reviews-box">
+                        <img src="/images/pfp_1_turtle.webp" alt="">
+                        <h2>John Smith</h2>
+                        <span>So delicious and tasty! </span>
+                        <p>
+                            We went today for the first time and the staff were amazing, and very helpful. 
+                            The cookies were so thin and sooo yummy, totally exceeded our expectations.
+                        </p>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="swiper-slide">
+                    <div class="reviews-box">
+                        <img src="/images/pfp_2_shark.jpeg" alt="">
+                        <h2>Michael John</h2>
+                        <span>Such a Wonderful Clean Place freshly baked cookies and <br />
+                            they are Thin and delicious!! </span>
+                        <p>
+                            Tates cookies have nothing on this place! Thin Cookies has delicious Soft cookies! 
+                            all the employees are so kind and just helpful! i really enjoyed going here and i can't wait to bring my 
+                            friends and family seriously i recommend going! they were about an hour away from me and i don't regret it! 
+                        </p>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="swiper-slide">
+                    <div class="reviews-box">
+                        <img src="/images/pfp_3_mantaray.jpeg" alt="">
+                        <h2>Joe Swanson</h2>
+                        <span>Cookies that keep you wanting more are my kind of cookies </span>
+                        <p>
+                            They just opened their new storefront in Hicksville & it smells heavenly in there 
+                            Best part is, it's a woman owned business & everyone is so friendly.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
 <!-------------------------------------------->
+
+        <!-- footer - section.footer.container#footer-->
+        <section class="footer container" id="footer">
+            <div class="footer-box">
+                <a href="#" class="logo">ThinCookies</a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>About</h3>
+                <a href="#">Our Story</a>
+                <a href="#">Location</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-box">
+                <h3>Customer's Recourses</h3>
+                <a href="#">Menu</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-box">
+                <h3>Services </h3>
+                <a href="#">Catering</a>
+                <a href="#">Become A Retailer</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </section>
+
+<!-------------------------------------------->
+        <!-- copyright -->
+        <p class="copyright">&#169; ThinCookiesDupe</p>
+
+
+
+<!-------------------------------------------->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- link to app.js -->
     <script src="/app.js"></script>
 </body>
