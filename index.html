@@ -12,29 +12,185 @@
 
 </head>
 
+<!--------------------------------------------> 
 <body>
     <!-- header here-->
     <header>
-        <!-- nav here -->
+        <!-- nav here - get access by .nav-->
         <div class="nav container">
-            <a href="#" class="logo">ThinCookies</a>
+            <a href="#" class="logo">COOKIES</a>
             <!-- navbar -->
-            <div class="navbar">
-                <a href="#home" class="nav-link"> Home</a>
-                <a href="#home" class="nav-link"> Services</a>
-                <a href="#home" class="nav-link"> Products</a>
-                <a href="#home" class="nav-link"> Team </a>
+            <div class="navbar"> <!-- get access by .navbar-->
+                <a href="#home" class="nav-link"> Home</a> <!-- get access by .nav-link-->
+                <a href="#flavors" class="nav-link"> Flavors</a>
+                <a href="#experts" class="nav-link"> Team </a>
+                <a href="#faq" class="nav-link"> FAQ</a>
                 <a href="#home" class="nav-link"> Reviews</a>
             </div>
             <!-- nav icons -->
-            <div class="nav-icons">
-                <a href="#"><i class='bx bx-user'></i></a>
+            <div class="nav-icons"> <!-- get access by .nav-icons-->
+                <a href="#"><i class='bx bx-user'></i></a> <!-- get access by .nav-icon .bx-->
                 <a href="#"><i class='bx bxs-shopping-bags'></i></a>
             </div>
         </div>
     </header>
+<!-------------------------------------------->
 
+    <!-- for home - section.home.container#home-->
+    <section class="home container" id="home">
+        <div class="home-text">
+            <h1>
+              Fresh Coffee & ThinCookies
+              <!-- <h6>Study with us!</h6> -->
+            </h1>
+            <p>
+                A simple latte with cookies <br />Anywhere Anytime
+            </p>
+            <a href="#" class="btn">
+                <span>Shop now!</span>
+                <i class='bx bx-chevron-up'></i>
+            </a>
+        </div>
+        <!-- home image -->
+        <img src="/images/outside_pic.jpeg" alt="" class="home-img">
+    </section>
+<!--------------------------------------------> 
+    <!-- for flavors - section.flavors.container#flavors -->
+    <section class="flavors container" id="flavors">
+        <div class="heading">
+            <h2>
+                3 original flavors
+            </h2>
+        </div> 
+        <div class="flavors-content">
+            <div class="fvr-box">
+                <img src="images/cc_1tp.png" alt="" />
+                <p>Chocolate Chip</p>
+                <h2>A classic. Rich and buttery, and packed with chocolate chips.</h2>
+                <div class="fvr-price">
+                    <span>6 cookies: $7</span>
+                    <i class='bx bx-cart-add'></i>
+                </div>
+            </div>
+            <div class="fvr-box">
+                <img src="images/dc_2tp.png" alt="" />
+                <p>Double Chocolate</p>
+                <h2>Rich, chocolatey, moist and tender - these cookies taste like a brownie in cookie form. </h2>
+                <div class="fvr-price">
+                    <span>12 cookies: $13</span>
+                    <i class='bx bx-cart-add'></i>
+                </div>
+            </div>
+            <div class="fvr-box">
+                <img src="images/sd_3tp.png" alt="" />
+                <p>Snickerdoodle</p>
+                <h2>A delicious comforting cookie with warm, buttery cinnamon goodness in every bite.</h2>
+                <div class="fvr-price">
+                    <span>24 cookies: $25</span>
+                    <i class='bx bx-cart-add'></i>
+                </div> 
+            </div>
+        </div>
+    </section>
 
+<!-------------------------------------------->
+
+    <!-- for experts - section.experts.container#experts -->
+    <section class="experts container" id="experts">
+        <div class="heading">
+            <h2>
+                Meet Out Experts
+            </h2>
+        </div>
+        <!-- team content -->
+        <div class="team-content">
+            <!-- team box 1 -->
+            <div class="team-box">
+                <img src="images/23champ_BoramUm.webp" alt="">
+                <h2>Boram Um </h2>
+                <span>2023 World Barista Champion</span>
+                <p>Knowing where your coffee comes from is essential in 
+                    specialty coffee, but getting to know your producers 
+                    is the cherry on top!</p> 
+            </div>
+            <!-- team box 2-->
+            <div class="team-box">
+                <img src="images/22champ_anthonyDouglas.jpeg" alt="">
+                <h2>Anthony Douglas </h2>
+                <span>2022 World Barista Champion</span>
+                <p>"I fell in love with the process of 
+                    making coffee...Once I left that job, 
+                    the only thing I wanted to do was make coffee.”</p> 
+            </div>
+            <!-- team box 3 -->
+            <div class="team-box">
+                <img src="/images/21champ_diegoCampos.jpeg" alt="">
+                <h2>Diego Campos</h2>
+                <span>2021 World Barista Champion</span>
+                <p>“Colombia, this is for you: baristas, coffee growers, 
+                    and the people who get up every day to dream and want to 
+                    achieve things.”</p> 
+            </div>
+        </div>
+    </section>
+
+<!-------------------------------------------->
+
+    <!-- for FAQ -  section.faq.container#faq-->
+    <section class="faq container" id="faq">
+        <div class="heading">
+            <h2>
+                FAQ
+            </h2>
+            <p>
+                Frequently Asked Questions
+            </p>
+        </div>
+        <!-- question content .faq-content--->
+        <div class="faq-content">
+            <!-- box 1 content -->
+            <div class="faq-box">
+                <img src="images/notglutenfree.jpeg" alt="">
+                <h2>
+                    Do you offer any Gluten Free/Vegan options?
+                </h2>
+                <p>
+                    As of now, Thin Cookies has no gluten free or vegan menu items.
+                </p>
+            </div>
+            <!-- box 2 content -->
+            <div class="faq-box">
+                <img src="images/preanutfree.jpeg" alt="">
+                <h2>
+                    Do your cookies contain nuts or any other top allergens?
+                </h2>
+                <p>
+                    No, our cookies do not contain any nuts. Thin cookies is a nut free facility.                </p>
+            </div>
+            <!-- box 3 content -->
+            <div class="faq-box">
+                <img src="images/all_2.jpeg" alt="">
+                <h2>
+                    Do you ship your cookies?
+                </h2>
+                <p>
+                    As of now, Thin Cookies does not ship yet.                
+                </p>
+            </div>
+            <!-- box 4 content -->
+            <div class="faq-box">
+                <img src="images/mystery_cookie.png" alt="">
+                <h2>
+                    Will you be having more flavors?
+                </h2>
+                <p>
+                    Yes, we will start releasing new flavors in a few months. Have a flavor suggestion? Email us!
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-------------------------------------------->
 <!-- link to app.js -->
     <script src="/app.js"></script>
 </body>

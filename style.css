@@ -9,19 +9,14 @@
     scroll-padding-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 }
-/* variables */
-/* :root{  
-    --main-color: #54372a;
-    --second-color: #df582e;
-    --text-color: #060413;
-    --container-color: #f8e4be;
-    --bg-color: #f9f6f2;
-    --text-alter-color: #94908e;
-} */
 
-body{
-    background-color: #f9f6f2;
+body {
+    background-color: #fff;
+    padding-top: 90px; 
+    /* adjust value according to header height 
+        and takes .container styles*/
 }
+
 
 a{
     color: black; 
@@ -54,6 +49,7 @@ header{
     left: 0px;
     width: 100%;
     z-index: 100;
+    /* border-radius: 2rem; not needed but i wanted to see what is actually happening*/
 }
 
 .nav{
@@ -68,7 +64,12 @@ header{
 .logo{
     font-size: 1.5rem;
     font-weight: 700;
+    text-transform: uppercase;
 
+}
+.logo::before {
+    content: "THIN"; /* adds THIN to logo name  */
+    font-weight: 100; /* change font-weight to 100 for "Thin" */
 }
 
 .navbar{
@@ -98,3 +99,240 @@ header{
     color: #fff;
     transition: all 0.3s ease;
 }
+
+/* <!--home------------------------------------------> */
+
+.home{
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+}
+
+.home-text h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+
+}
+.home-text p{
+    max-width: 300px;
+    font-size: 0.95rem;
+    margin: 1rem 0 1.5rem; /*top/btm - right - left == if has 4 value then
+                                    top - right - btm - left*/
+}
+
+.btn{
+    max-width: 160px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    border-radius: 2rem;
+    background-color: #f7e27d;
+}
+
+.btn span{
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.btn .bx{
+    font-size: 20px;
+    padding: 1px;
+    border-radius: 50%;
+    transform: rotate(60deg);
+}
+
+.home-img{
+    max-width: 560px;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/* <!--flavors------------------------------------------> */
+
+#flavors{
+    margin-top: -2rem;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading h2{
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.flavors-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto,200px));
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+.flavors-content p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    
+}
+.flavors-content h2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+    color: #000;
+    font-size: 0.88rem;
+    
+}
+
+.fvr-box{
+    background-color: #f7e27d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 35px 20px;
+    border-radius: 2rem;
+    width: 275px;
+}
+.fvr-box img{
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.fvr-price{
+    align-items: center;
+    text-align: center;
+}
+
+.fvr-price span {
+    top: 10rem;
+    font-weight: 400;
+}
+
+
+.fvr-price .bx{ 
+    top: 10px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #000;
+    margin: 0 10px;
+
+ }
+
+
+/* <!--for Team------------------------------------------> */
+
+#experts{
+    margin-top: 4rem;
+}
+
+.team-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+
+}
+
+.team-box img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-box h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.team-box span{
+    font-size: 0.77rem;
+}
+
+.team-box p{
+    font-size: 0.88rem;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* <!--FAQ------------------------------------------> */
+
+#faq{
+    margin-top: 4rem;
+}
+.heading p{
+    max-width: 550px;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.faq-content{
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #f7e27d;
+    border-radius: 1.5rem;
+    padding: 40px 60px;
+    color: #000;
+
+}
+
+.faq-box{
+    background: #fff;
+    padding: 20px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; 
+    height: 100%; /* set height to occupy full container height */
+}
+
+.faq-box img {
+    margin-top: 1.5rem;
+    width: 250px;
+    height: 250px;
+    border: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.faq-box h2{
+    padding: 1px 29px;
+    text-align: center;
+    margin: 1rem 0 0 ;
+}
+
+.faq-box p{
+    font-size: .8rem;
+    padding: 5px 29px;
+    border: 1px solid;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem 0 0 ;
+    font-weight: 500;
+}
+
+/* <!--Locations-new idea put oder now before FAQ-----------------------------------------> */
