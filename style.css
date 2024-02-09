@@ -12,7 +12,7 @@
 
 body {
     background-color: #fff;
-    padding-top: 90px; 
+    padding-top: 35px; 
     /* adjust value according to header height 
         and takes .container styles*/
 }
@@ -39,7 +39,7 @@ section{
     margin: auto ;
     padding: 50px 0px;  
     /* because of this 0px 50px - why the header is under the header and not giving space*/
-    max-width: 1400px;
+    max-width: 1060px;
     width: 100%;
 }
 
@@ -47,10 +47,12 @@ section{
 header{
     position: fixed;
     top: 0px;
-    /* left: 0px; */
+    left: auto;
+    right: auto;
     width: 100%;
     z-index: 100;
     /* border-radius: 2rem; not needed but i wanted to see what is actually happening*/
+    margin-top: 20px;
 }
 
 .nav{
@@ -93,6 +95,37 @@ header{
     align-items: center;
     column-gap: 2rem;
 }
+/* menu icons here ------------------------------*/
+.menu-icon{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transform: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 23px;
+    transition: 0.3s;
+}
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* -------------------------------------------- */
+
+
 .nav-icons .bx{
     font-size: 25px;
 }
@@ -107,11 +140,11 @@ header{
 .home{
     min-height: 650px;
     display: grid;
-    grid-template-columns: repeat(2,637px);
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 1.5rem;
     margin-top: -5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }  
 
 .home-text h1{
@@ -148,14 +181,14 @@ header{
     font-size: 20px;
     padding: 1px;
     border-radius: 50%;
-    transform: rotate(60deg);
+    transform: rotate(180deg);
 }
 .btn:hover{
     opacity: 0.63;
  } 
 
 .home-vid{
-    max-width: 1080px;
+    max-width: 560px;
     width: 100%;
     border-radius: 1rem;
 }
@@ -241,6 +274,131 @@ header{
     opacity: 0.63;
  } 
 
+/* <!--for slideshows cookies------------------------------------------> */
+/* there will be a bunch of comments here, just playing around with animation */
+
+
+.slides-frame {
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 1rem;
+}
+
+.slides-images {
+    display: flex; /* Use flexbox to lay images in a row */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    position: relative;
+    animation-name: slide_animation; /* Apply the continuous sliding animation */
+    animation-duration: 60s; /* Adjust duration to control the speed of the slide */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* Make the animation proceed at a constant pace */
+}
+
+/* Define the keyframes for the slide animation */
+@keyframes slide_animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-500%); } /* Translate by the combined width of all images except the first one */
+}
+
+.img-container {
+    position: relative;
+    flex: 0 0 100%; /* Set the width of each .img-container to be 100% of .slides-frame */
+    /* Make sure images fill the container */
+    width: 100%;
+}
+
+/* Adjust the size of images if needed to ensure they cover the container */
+.img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* .slider-wrapper{
+    margin: 0 auto; /*will center*/
+    /* animation: slide 16s infinite; */
+/*
+.slider {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    x-offset = y-offset = blur = spread = color (hue = saturation = lightness = alpha)
+    border-radius: 1rem;
+    animation: 5s slider infinite;
+
+}
+
+.slider img{
+    flex: 1 0 100%;
+    /* equal size = retain form = initial size  */
+    /*scroll-snap-align: start;
+    object-fit: cover;
+} 
+
+/* .slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+
+} */
+
+/* @keyframes slider {
+    0%{
+        left: 0;
+    }
+    25%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    } */
+    
+
+/* 
+.slider-nav a{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: .75;
+    transition: opacity ease 250ms;
+
+}
+.slider-nav a:hover,
+.slider-nav a:active,
+.slider-nav a:focus{
+    color: #f7e27d;
+    transition: all ease 0.3s;
+} */
+
+
+
+
+
+
 
 /* <!--for Team------------------------------------------> */
 
@@ -293,9 +451,9 @@ header{
 
 .faq-content{
     display: grid;
-    grid-template-columns: repeat(2, 525px);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     background-color: #f7e27d;
     border-radius: 1.5rem;
     padding: 70px 90px;
@@ -305,22 +463,23 @@ header{
 
 .faq-box{
     background: #fff;
-    padding: 20px;
+    padding: 10px 10px;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left; 
+    text-align: center; 
     height: 100%; /* set height to occupy full container height */
 }
 
 .faq-box img {
     margin-top: 1.5rem;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border: 50%;
     object-fit: cover;
     border-radius: 1rem;
+    align-content: center;
 }
 
 .faq-box h2{
@@ -451,4 +610,210 @@ header{
     padding: 30px;
     text-align: center;
 
+}
+
+/* <!--responsive-----------------------------------------> */
+
+@media(max-width: 1080px){
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .home {
+        min-height: 650px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* occupies all available pixels and thats why it when adjusting.
+        the vid/img goes out of bounds */
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: -5rem;
+        margin-bottom: 3rem;
+    }   
+    .home-text h1{
+        font-size: 3rem;
+    }
+    
+    .faq-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+    }
+}
+@media(max-width: 875px){
+    section{
+        padding: 2rem 0;
+
+    }
+    .home-text h1{
+        font-size: 2.5rem;
+    }
+}
+
+
+/* @media(max-width: 770px){
+    .home{
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 4.5rem !important;
+
+    }
+    .home-text{
+        order: 1;
+    }
+    
+}  */
+@media(max-width: 700px){
+    .home{
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 4.5rem !important;
+
+    }
+    .home-text{
+        order: 1;
+    }
+
+    .header{
+        top: 15px;
+    }
+    .nav{
+        padding: 14px 20px;
+    }
+
+    .logo{
+        font-size: 1.25rem ;
+    }
+
+    .menu-icon{
+        display: flex;
+    }
+    .navbar{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        background-color: #f7e27d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    }
+    .open-menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .nav-link{
+        display: block;
+        margin: 1rem 0;
+    }
+    .faq-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+
+@media(max-width: 500px){
+    .faq-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .flavors-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-left: 41px;
+        
+    }
+    .team-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 0px;
+        gap: 1.5rem;
+    }
+    .heading {
+        margin-left: -34px;
+    }
+
+    .heading h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        padding-left: 29px;
+ 
+    }
+    
+    .faq-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        right: 50px;
+        transform: translate( 3px);
+    }
+    .heading p {
+        padding-left: 30px;
+    }
+    .reviews-box {
+        padding-left: -4px;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        padding-left: 4px;
+    }
+    #footer {
+        grid-template-columns: repeat(1, 1fr);
+       padding-left: 0px;
+    }
+}
+
+
+@media(max-width: 380px){
+    .faq-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .flavors-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-left: 35px;
+        
+    }
+    .team-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        gap: 1.5rem;
+    }
+    .heading h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        padding-left: -50px;
+        right: 20px;
+        transform: translate( -5px);
+ 
+    }
+    
+    .faq-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        right: 50px;
+        transform: translate( 3px);
+    }
+    .heading p {
+        padding-left: -25px;
+    }
+    .reviews-box {
+        padding-left: 10px;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        padding-left: 10px;
+    }
+    #footer {
+        grid-template-columns: repeat(1, 1fr);
+       padding-left: 0px;
+    }
 }

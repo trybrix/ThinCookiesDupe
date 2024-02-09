@@ -27,12 +27,18 @@
                 <a href="#flavors" class="nav-link"> Flavors</a>
                 <a href="#experts" class="nav-link"> Team </a>
                 <a href="#faq" class="nav-link"> FAQ</a>
-                <a href="#home" class="nav-link"> Reviews</a>
+                <a href="#reviews" class="nav-link"> Reviews</a>
             </div>
             <!-- nav icons -->
             <div class="nav-icons"> <!-- get access by .nav-icons-->
                 <a href="#"><i class='bx bx-user'></i></a> <!-- get access by .nav-icon .bx-->
                 <a href="#"><i class='bx bxs-shopping-bags'></i></a>
+                <!-- menu icon -->
+                    <div class="menu-icon">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
             </div>
         </div>
     </header>
@@ -41,6 +47,7 @@
     <!-- for home - section.home.container#home-->
     <section class="home container" id="home">
         <div class="home-text">
+            <h2>This is a a Dupe of ThinCookie and not the actual website!</h2>
             <h1>
                 Fresh Coffee & ThinCookies
               <!-- <h6>Study with us!</h6> -->
@@ -54,7 +61,7 @@
             </a>
         </div>
         <!-- home image -->
-            <video controls autoplay src="/images/cookie_vid_1.mov" alt="" class="home-vid"> 
+        <video autoplay muted src="/images/cookie_vid_1.mov" alt="" class="home-vid"> 
     </section>
 <!--------------------------------------------> 
     <!-- for flavors - section.flavors.container#flavors -->
@@ -96,6 +103,34 @@
             </div>
         </div>
     </section>
+<!-------------------------------------------->
+
+    <!-- this is for slideshow for cookies -->
+    <section class="cookies container" id="cookies">
+        <div class="slides-frame">
+            <div class="slides-images">
+                <div class="img-container">
+                    <img id='slide1' src="/images/all_1.png" alt="">
+                </div>
+                <div class="img-container">
+                    <img id='slide2' src="/images/cc_group_1.png" alt="chocolate chip cookie">                
+                </div>
+                <div class="img-container">
+                    <img id='slide3' src="/images/dc_group_2.png" alt="double chocolate cookie">                
+                </div>
+                <div class="img-container">
+                    <img id='slide4' src="/images/sd_group_2.png" alt="Snickerdoodle cookie">                
+                </div>
+                <div class="img-container">
+                    <img id='slide5' src="/images/mix_1.png" alt="Snickerdoodle cookie">                
+                </div>
+                <div class="img-container">
+                    <img id='slide6' src="/images/all_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <!-------------------------------------------->
 
@@ -110,14 +145,23 @@
         <div class="team-content">
             <!-- team box 1 -->
             <div class="team-box">
+                <img src="images/cookingmama.png" alt="">
+                <h2>Cooking Mama</h2>
+                <span>World Cooking Champion</span>
+                <p>"Wow! Even Better Than Mama!<br />
+                    When a parent says you've surpassed them, a necessary step in the circle of life occurs. 
+                    Suddenly, the two of you become not quite peers but something new."</p> 
+            </div>
+            <!-- team box 2-->
+            <div class="team-box">
                 <img src="images/23champ_BoramUm.webp" alt="">
                 <h2>Boram Um </h2>
                 <span>2023 World Barista Champion</span>
-                <p>Knowing where your coffee comes from is essential in 
+                <p>"Knowing where your coffee comes from is essential in 
                     specialty coffee, but getting to know your producers 
-                    is the cherry on top!</p> 
+                    is the cherry on top!"</p> 
             </div>
-            <!-- team box 2-->
+            <!-- team box 3 -->
             <div class="team-box">
                 <img src="images/22champ_anthonyDouglas.jpeg" alt="">
                 <h2>Anthony Douglas </h2>
@@ -126,7 +170,7 @@
                     making coffee...Once I left that job, 
                     the only thing I wanted to do was make coffee.”</p> 
             </div>
-            <!-- team box 3 -->
+            <!-- team box 4 -->
             <div class="team-box">
                 <img src="/images/21champ_diegoCampos.jpeg" alt="">
                 <h2>Diego Campos</h2>
@@ -169,7 +213,8 @@
                     Do your cookies contain nuts or any other top allergens?
                 </h2>
                 <p>
-                    No, our cookies do not contain any nuts. Thin cookies is a nut free facility.                </p>
+                    No, our cookies do not contain any nuts. Thin cookies is a nut free facility.                
+                </p>
             </div>
             <!-- box 3 content -->
             <div class="faq-box">
@@ -207,10 +252,10 @@
                     <div class="reviews-box">
                         <img src="/images/pfp_1_turtle.webp" alt="">
                         <h2>John Smith</h2>
-                        <span>So delicious and tasty! </span>
+                        <span>"So delicious and tasty!"</span>
                         <p>
-                            We went today for the first time and the staff were amazing, and very helpful. 
-                            The cookies were so thin and sooo yummy, totally exceeded our expectations.
+                            "We went today for the first time and the staff were amazing, and very helpful. 
+                            The cookies were so thin and sooo yummy, totally exceeded our expectations."
                         </p>
                     </div>
                 </div>
@@ -219,12 +264,11 @@
                     <div class="reviews-box">
                         <img src="/images/pfp_2_shark.jpeg" alt="">
                         <h2>Michael John</h2>
-                        <span>Such a Wonderful Clean Place freshly baked cookies and <br />
-                            they are Thin and delicious!! </span>
+                        <span>"Such a Wonderful Clean Place freshly baked cookies and they are Thin and delicious!!"</span>
                         <p>
-                            Tates cookies have nothing on this place! Thin Cookies has delicious Soft cookies! 
+                            "Tates cookies have nothing on this place! Thin Cookies has delicious Soft cookies! 
                             all the employees are so kind and just helpful! i really enjoyed going here and i can't wait to bring my 
-                            friends and family seriously i recommend going! they were about an hour away from me and i don't regret it! 
+                            friends and family seriously i recommend going! they were about an hour away from me and i don't regret it!"
                         </p>
                     </div>
                 </div>
@@ -233,14 +277,17 @@
                     <div class="reviews-box">
                         <img src="/images/pfp_3_mantaray.jpeg" alt="">
                         <h2>Joe Swanson</h2>
-                        <span>Cookies that keep you wanting more are my kind of cookies </span>
+                        <span>"Cookies that keep you wanting more are my kind of cookies" </span>
                         <p>
-                            They just opened their new storefront in Hicksville & it smells heavenly in there 
-                            Best part is, it's a woman owned business & everyone is so friendly.
+                            "They just opened their new storefront in Hicksville & it smells heavenly in there 
+                            Best part is, it's a woman owned business & everyone is so friendly."
                         </p>
                     </div>
                 </div>
                 </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- if you want to add a next-prev button -->
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -284,6 +331,8 @@
 
 
 <!-------------------------------------------->
+<!-- header scroll reveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- link to app.js -->
